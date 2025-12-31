@@ -1,0 +1,90 @@
+[
+  {
+    "closed_at": "2012-05-10T12:00:00Z",
+    "created_at": "2011-04-22T13:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/1347",
+    "number": 1347,
+    "state": "closed",
+    "labels": [
+      {
+        "name": "bug"
+      }
+    ]
+  },
+  {
+    "closed_at": "2011-07-01T10:15:30Z",
+    "created_at": "2011-06-20T08:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/1999",
+    "number": 1999,
+    "state": "closed",
+    "labels": [],
+    "draft": true
+  },
+  {
+    "closed_at": null,
+    "created_at": "2011-08-20T08:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/2000",
+    "number": 2000,
+    "state": "open",
+    "labels": [],
+    "pull_request": {}
+  },
+  {
+    "closed_at": "2012-01-15T09:20:10Z",
+    "created_at": "2011-04-22T13:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/4711",
+    "number": 4711,
+    "state": "closed",
+    "labels": [
+      {
+        "name": "bug"
+      },
+      {
+        "name": "enhancement"
+      }
+    ]
+  },
+  {
+    "closed_at": "2011-09-30T11:45:00Z",
+    "created_at": "2011-08-22T13:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/4712",
+    "number": 4712,
+    "state": "closed",
+    "labels": [
+      {
+        "name": "bug"
+      },
+      {
+        "name": "help wanted"
+      }
+    ]
+  },
+  {
+    "closed_at": "2012-04-05T14:22:30Z",
+    "created_at": "2012-03-22T13:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/8888",
+    "number": 8888,
+    "state": "closed",
+    "labels": [
+      {
+        "name": "bug"
+      },
+      {
+        "name": "urgent"
+      }
+    ]
+  },
+  {
+    "closed_at": null,
+    "created_at": "2012-04-22T13:33:48Z",
+    "html_url": "https://github.com/octodog/bark/issues/9999",
+    "number": 9999,
+    "state": "open",
+    "labels": [
+      {
+        "name": "urgent"
+      }
+    ]
+  }
+
+]
