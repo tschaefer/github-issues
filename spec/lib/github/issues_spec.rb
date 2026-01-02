@@ -124,8 +124,8 @@ RSpec.describe Github::Issues do
     end
 
     it 'returns all unique labels' do
-      issues = described_class.new('octodog/bark').labels
-      expect(issues).to eq(labels)
+      instance = described_class.new('octodog/bark')
+      expect(instance.labels).to eq(labels.sort.reverse)
     end
   end
 
