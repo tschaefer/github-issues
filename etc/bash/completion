@@ -36,11 +36,16 @@ _github_issues_period() {
     local cur prev
     _get_comp_words_by_ref -n : cur prev
 
-    local options='--label --finished --legend --pager --chart'
+    local options='--label --finished --format --legend --pager'
     local info='--help --man --version'
+    local formats='table chart json'
 
     case "$prev" in
         --help|--man|--version)
+            return
+            ;;
+        --format)
+            mapfile -t COMPREPLY < <(compgen -W "${formats}" -- "$cur")
             return
             ;;
     esac
