@@ -8,7 +8,7 @@ module Github
       ##
       # Mixin for option parsing methods
       module Options
-        DEFAULT_CONFIG_FILE = File.join(Dir.home, '.config/github-issues.json').freeze
+        DEFAULT_CONFIG_FILE = File.join(Dir.home, '.config/gh-issues-stats.json').freeze
 
         private
 
@@ -67,7 +67,7 @@ module Github
         #
         # @return [String] Cache directory path
         def options_parse_cache_path(path)
-          path || File.join(Dir.home, '.cache', 'github-issues')
+          path || File.join(Dir.home, '.cache', 'gh-issues-stats')
         end
       end
     end

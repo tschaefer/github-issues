@@ -30,7 +30,7 @@ Metrics/MethodLength:
 
 Naming/FileName:
   Exclude:
-    - 'lib/github-issues.rb'
+    - 'lib/gh-issues-stats.rb'
 
 RSpec/ExampleLength:
   CountAsOne:

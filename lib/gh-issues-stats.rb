@@ -4,7 +4,7 @@ require 'zeitwerk'
 
 loader = Zeitwerk::Loader.for_gem(warn_on_extra_files: false)
 loader.inflector.inflect(
-  'github-issues' => 'Github',
+  'gh-issues-stats' => 'Github',
   'version' => 'VERSION'
 )
 loader.collapse("#{__dir__}/github/issues/mixins")

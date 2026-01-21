@@ -1,15 +1,15 @@
-# github-issues
+# gh-issues-stats
 
-[![Tag](https://img.shields.io/github/tag/tschaefer/github-issues.svg)](https://github.com/tschaefer/github-issues/releases)
+[![Tag](https://img.shields.io/github/tag/tschaefer/gh-issues-stats.svg)](https://github.com/tschaefer/gh-issues-stats/releases)
 ![Ruby Version](https://img.shields.io/badge/Ruby-%3E%3D%203.3-%23007d9c)
-[![Contributors](https://img.shields.io/github/contributors/tschaefer/github-issues)](https://github.com/tschaefer/github-issues/graphs/contributors)
-[![License](https://img.shields.io/github/license/tschaefer/github-issues)](./LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/tschaefer/gh-issues-stats)](https://github.com/tschaefer/gh-issues-stats/graphs/contributors)
+[![License](https://img.shields.io/github/license/tschaefer/gh-issues-stats)](./LICENSE)
 
 A Ruby gem for analyzing GitHub repository issues with statistics and visualizations.
 
 ## Description
 
-`github-issues` is a command-line tool that helps you analyze and understand the issues lifecycle in any GitHub repository. It provides detailed statistics, visualizations, and insights about issues including:
+`gh-issues-stats` is a command-line tool that helps you analyze and understand the issues lifecycle in any GitHub repository. It provides detailed statistics, visualizations, and insights about issues including:
 
 - Issue creation trends over time (yearly/monthly breakdowns)
 - Closing time statistics (average and median)
@@ -22,14 +22,14 @@ A Ruby gem for analyzing GitHub repository issues with statistics and visualizat
 ### Install as a Gem
 
 ```bash
-gem install github-issues
+gem install gh-issues-stats
 ```
 
 ### Install from Source
 
 ```bash
-git clone https://github.com/tschaefer/github-issues.git
-cd github-issues
+git clone https://github.com/tschaefer/gh-issues-stats.git
+cd gh-issues-stats
 bundle install
 rake install
 ```
@@ -52,12 +52,12 @@ rake install
 Display yearly statistics for a repository:
 
 ```bash
-github-issues yearly owner/repository
+gh-issues-stats yearly owner/repository
 ```
 
 Example:
 ```bash
-github-issues yearly rails/rails
+gh-issues-stats yearly rails/rails
 ```
 
 Options:
@@ -72,12 +72,12 @@ Options:
 Display monthly statistics for a specific year:
 
 ```bash
-github-issues monthly YEAR owner/repository
+gh-issues-stats monthly YEAR owner/repository
 ```
 
 Example:
 ```bash
-github-issues monthly 2023 rails/rails
+gh-issues-stats monthly 2023 rails/rails
 ```
 
 Options: Same as yearly command
@@ -87,14 +87,14 @@ Options: Same as yearly command
 Display all labels used in a repository:
 
 ```bash
-github-issues labels owner/repository
+gh-issues-stats labels owner/repository
 ```
 
 ### Global Options
 
-- `--configuration-file FILE` - Specify a configuration file (default: ~/.config/github-issues.json)
+- `--configuration-file FILE` - Specify a configuration file (default: ~/.config/gh-issues-stats.json)
 - `--cache-path PATH` - Specify cache directory (default:
-  ~/.cache/github-issues)
+  ~/.cache/gh-issues-stats)
 - `--refresh INTERVAL` - Set refresh interval (e.g., 30minutes, 2.5hours, 1day) (default: 24hours)
 - `-v, --version` - Show version information
 - `-m, --man` - Show manual page
@@ -103,17 +103,17 @@ github-issues labels owner/repository
 
 Filter issues by multiple labels:
 ```bash
-github-issues yearly --label bug --label '!enhancement' rails/rails
+gh-issues-stats yearly --label bug --label '!enhancement' rails/rails
 ```
 
 Show monthly breakdown with chart visualization:
 ```bash
-github-issues monthly --format chart 2023 rails/rails
+gh-issues-stats monthly --format chart 2023 rails/rails
 ```
 
 Use with custom refresh interval:
 ```bash
-github-issues --refresh 2hours yearly rails/rails
+gh-issues-stats --refresh 2hours yearly rails/rails
 ```
 
 ## Configuration
@@ -145,8 +145,8 @@ The cache is automatically refreshed on call based on the refresh interval
 ### Setup
 
 ```bash
-git clone https://github.com/tschaefer/github-issues.git
-cd github-issues
+git clone https://github.com/tschaefer/gh-issues-stats.git
+cd gh-issues-stats
 bundle install
 ```
 

@@ -26,7 +26,7 @@ task :console do
   require 'pry'
   require 'pry-byebug'
   require 'pry-doc'
-  require 'github-issues'
+  require 'gh-issues-stats'
 
   reload!(print: false)
 

@@ -4,7 +4,7 @@ $LOAD_PATH << File.expand_path('lib', __dir__)
 require 'github/issues/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'github-issues'
+  spec.name        = 'gh-issues-stats'
   spec.version     = Github::Issues::VERSION
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ['Tobias Schäfer']
@@ -14,18 +14,18 @@ Gem::Specification.new do |spec|
   spec.description = <<~DESC
     #{spec.summary}
   DESC
-  spec.homepage    = 'https://github.com/tschaefer/github-issues'
+  spec.homepage    = 'https://github.com/tschaefer/gh-issues-stats'
   spec.license     = 'MIT'
 
   spec.files                 = Dir['lib/**/*']
   spec.bindir                = 'bin'
-  spec.executables           = ['github-issues']
+  spec.executables           = ['gh-issues-stats']
   spec.require_paths         = ['lib']
   spec.required_ruby_version = '>= 3.3.0'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
-  spec.metadata['source_code_uri']       = 'https://github.com/tschaefer/github-issues'
-  spec.metadata['bug_tracker_uri']       = 'https://github.com/tschaefer/github-issues/issues'
+  spec.metadata['source_code_uri']       = 'https://github.com/tschaefer/gh-issues-stats'
+  spec.metadata['bug_tracker_uri']       = 'https://github.com/tschaefer/gh-issues-stats/issues'
 
   spec.add_dependency 'clamp', '~> 1.3.2'
   spec.add_dependency 'faraday-retry', '~> 2.4.0'

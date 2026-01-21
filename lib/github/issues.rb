@@ -11,7 +11,7 @@ module Github
     include Fetch
     include Group
 
-    CACHE_DIR = File.join(Dir.home, '.cache', 'github-issues').freeze
+    CACHE_DIR = File.join(Dir.home, '.cache', 'gh-issues-stats').freeze
     DATABASE_NAME = 'issues.db'
 
     ##

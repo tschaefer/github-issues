@@ -99,6 +99,6 @@ _github_issues() {
 
 }
 
-complete -F _github_issues github-issues
+complete -F _github_issues gh-issues-stats
 
 # vim: ft=bash

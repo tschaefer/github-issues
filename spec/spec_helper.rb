@@ -17,7 +17,7 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'webmock/rspec'
 
-require 'github-issues'
+require 'gh-issues-stats'
 # bundle exec rake rspec requires implicit loading of the class
 require 'github/issues'
 

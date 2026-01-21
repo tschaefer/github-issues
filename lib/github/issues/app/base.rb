@@ -21,12 +21,12 @@ module Github
         option ['-m', '--man'], :flag, 'show manpage' do # rubocop:disable Metrics/BlockLength
           manpage = <<~MANPAGE
             Name:
-                github-issues - Analyse Github repository issues lifecycle.
+                gh-issues-stats - Analyse Github repository issues lifecycle.
 
             #{help}
 
             Description:
-                github-issues is a command-line tool that helps you analyze and
+                gh-issues-stats is a command-line tool that helps you analyze and
                 understand the issues lifecycle in any GitHub repository. It provides
                 detailed statistics, visualizations, and insights about issues including:
 
@@ -48,10 +48,10 @@ module Github
 
             Options:
                 --configuration-file FILE
-                    Specify a configuration file (default: ~/.config/github-issues.json)
+                    Specify a configuration file (default: ~/.config/gh-issues-stats.json)
 
                 --cache-path PATH
-                    Specify cache path (default: ~/.cache/github-issues)
+                    Specify cache path (default: ~/.cache/gh-issues-stats)
 
                 --refresh INTERVAL
                     Set refresh interval (e.g., 30minutes, 2.5hours, 1day) (default: 24hours)
@@ -79,31 +79,31 @@ module Github
 
             Examples:
                 Display yearly statistics for a repository:
-                    $ github-issues yearly rails/rails
+                    $ gh-issues-stats yearly rails/rails
 
                 Display monthly statistics for a specific year:
-                    $ github-issues monthly 2023 rails/rails
+                    $ gh-issues-stats monthly 2023 rails/rails
 
                 Filter issues by multiple labels:
-                    $ github-issues yearly rails/rails --label bug --label '!enhancement'
+                    $ gh-issues-stats yearly rails/rails --label bug --label '!enhancement'
 
                 Show monthly breakdown with chart visualization:
-                    $ github-issues monthly 2023 rails/rails --chart
+                    $ gh-issues-stats monthly 2023 rails/rails --chart
 
                 Use with custom refresh interval:
-                    $ github-issues yearly rails/rails --refresh 2hours
+                    $ gh-issues-stats yearly rails/rails --refresh 2hours
 
                 List all labels in a repository:
-                    $ github-issues labels rails/rails
+                    $ gh-issues-stats labels rails/rails
 
             Configuration:
                 For higher API rate limits, you can provide GitHub credentials through
                 a JSON configuration file. The configuration file will be loaded from
-                the path specified via --configuration-file (default: ~/.config/github-issues.json).
+                the path specified via --configuration-file (default: ~/.config/gh-issues-stats.json).
 
             Caching:
                 Issue data is cached locally in the specified cache path --cache-path
-                (default: ~/.cache/github-issues) to improve performance on subsequent
+                (default: ~/.cache/gh-issues-stats) to improve performance on subsequent
                 queries. The cache is automatically refreshed based on the refresh interval
                 (default: 24 hours).
 
@@ -111,7 +111,7 @@ module Github
                 Tobias Schäfer <github@blackox.org>
 
             Homepage:
-                https://github.com/tschaefer/github-issues
+                https://github.com/tschaefer/gh-issues-stats
           MANPAGE
           TTY::Pager.page(manpage)
 
@@ -119,7 +119,7 @@ module Github
         end
 
         option ['-v', '--version'], :flag, 'show version' do
-          puts "github-issues #{Github::Issues::VERSION}"
+          puts "gh-issues-stats #{Github::Issues::VERSION}"
           exit 0
         end
       end

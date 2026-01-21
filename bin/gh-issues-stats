@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'github-issues'
+require 'gh-issues-stats'
 
 Github::Issues::App::Command.run
