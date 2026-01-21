@@ -416,8 +416,8 @@ RSpec.describe Github::Issues do
     it 'returns expected keys per year' do
       issues = described_class.new('octodog/bark').per_year
       issues.each_key do |year|
-        expect(issues[year].size).to eq(4)
-        expect(issues[year].keys).to contain_exactly('created', 'closed', 'finished', 'stats')
+        expect(issues[year].size).to eq(5)
+        expect(issues[year].keys).to contain_exactly('created', 'closed', 'finished', 'open', 'stats')
       end
     end
 
@@ -503,8 +503,8 @@ RSpec.describe Github::Issues do
     it 'returns expected keys per month' do
       issues = described_class.new('octodog/bark').per_month(2011)
       issues.each_key do |month|
-        expect(issues[month].size).to eq(4)
-        expect(issues[month].keys).to contain_exactly('created', 'closed', 'finished', 'stats')
+        expect(issues[month].size).to eq(5)
+        expect(issues[month].keys).to contain_exactly('created', 'closed', 'finished', 'open', 'stats')
       end
     end
 

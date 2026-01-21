@@ -23,10 +23,12 @@ module Github
           if %w[true 1].include?(ENV.fetch('NO_COLOR', 'false').upcase)
             "#{chart_plot_created(values)}\n\n" \
               "#{chart_plot_closed(values)}\n\n" \
+              "#{chart_plot_open(values)}\n\n" \
               "#{chart_plot_created_closed_ratio(values)}"
           else
             chart_plot_created(values).render
             chart_plot_closed(values).render
+            chart_plot_open(values).render
             chart_plot_created_closed_ratio(values).render
           end
         end
@@ -37,6 +39,7 @@ module Github
               labels: [],
               created_counts: [],
               closed_counts: [],
+              open_counts: [],
               created_closed_ratios: []
             }
           )
@@ -45,6 +48,7 @@ module Github
             values.labels << period.to_s
             values.created_counts << (data.created&.size || 0)
             values.closed_counts << (data.closed&.size || 0)
+            values.open_counts << (data.open&.size || 0)
             values.created_closed_ratios << data.stats.ratio.all.round(2)
           end
 
@@ -75,6 +79,20 @@ module Github
             data.closed_counts,
             title: 'Closed',
             color: :green,
+            width: 60
+          )
+        end
+
+        ##
+        # Create the open issues barplot
+        #
+        # @return [UnicodePlot::Barplot] Open issues barplot
+        def chart_plot_open(data)
+          UnicodePlot.barplot(
+            data.labels,
+            data.open_counts,
+            title: 'Open',
+            color: :yellow,
             width: 60
           )
         end

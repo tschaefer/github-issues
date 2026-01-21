@@ -49,6 +49,7 @@ module Github
           header += %w[
             Created
             Closed
+            Open
             Created-Closed-Ratio
             Closed-Avg
             Closed-Median
@@ -78,14 +79,24 @@ module Github
             period,
             data.created&.size || 0,
             data.closed&.size || 0,
+            data.open&.size || 0,
             data.stats.ratio.all.round(2),
             stats.all_avg,
             stats.all_median
           ]
 
-          return all unless finished
+          all += table_row_finished_create(data) if finished
 
-          all + [
+          all
+        end
+
+        ##
+        # Creates the finished issues statistics for a table row
+        # @param data [Hash::Mash] Period data
+        #
+        # @return [Array] Finished issues statistics
+        def table_row_finished_create(data)
+          [
             data.finished&.size || 0,
             data.stats.ratio.finished.round(2),
             stats_seconds_to_days(data.stats.close_time.finished.average),
