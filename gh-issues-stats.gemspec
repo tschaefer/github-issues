@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri']       = 'https://github.com/tschaefer/gh-issues-stats'
   spec.metadata['bug_tracker_uri']       = 'https://github.com/tschaefer/gh-issues-stats/issues'
 
-  spec.add_dependency 'clamp', '~> 1.3.2'
+  spec.add_dependency 'clamp', '>= 1.3.2', '< 1.5.0'
   spec.add_dependency 'faraday-retry', '~> 2.4.0'
   spec.add_dependency 'hashie', '~> 5.1.0'
   spec.add_dependency 'octokit', '~> 10.0.0'
